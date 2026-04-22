@@ -294,54 +294,7 @@ body {
   font-family: monospace;
 }
 
-/* CODE BLOCK */
-.code-block {
-  background: #1e293b;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-.code-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-  background: #0f172a;
-}
-.code-lang {
-  font-size: 11px;
-  font-weight: 700;
-  color: #7dd3fc;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-.copy-btn {
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 6px;
-  padding: 4px 12px;
-  color: rgba(255,255,255,.8);
-  font-size: 11px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: 'Nunito', sans-serif;
-  transition: background .15s;
-}
-.copy-btn:hover { background: rgba(255,255,255,.2); }
-.copy-btn.copied { color: #6ee7b7; border-color: #6ee7b7; }
-pre {
-  padding: 16px 20px;
-  overflow-x: auto;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #e2e8f0;
-  font-family: 'Courier New', monospace;
-}
-.hl-tag   { color: #7dd3fc; }
-.hl-attr  { color: #fbbf24; }
-.hl-val   { color: #86efac; }
-.hl-cmt   { color: #64748b; font-style: italic; }
-.hl-url   { color: #f9a8d4; font-weight: 700; }
+
 
 /* CHAPITRAGE */
 .chapters {
@@ -519,24 +472,7 @@ footer {
     </div>
   </div>
 
-  <!-- CODE EMBED PRÊT À COPIER -->
-  <div class="code-block">
-    <div class="code-header">
-      <span class="code-lang">HTML — Embed YouTube prêt à coller</span>
-      <button class="copy-btn" onclick="copyCode(this, 'code-yt')">Copier</button>
-    </div>
-    <pre id="code-yt"><span class="hl-cmt">&lt;!-- Embed YouTube — La Nomenclature Dintilhac — TMK Performances --&gt;</span>
-<span class="hl-tag">&lt;div</span> <span class="hl-attr">style</span>=<span class="hl-val">"position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;"</span><span class="hl-tag">&gt;</span>
-  <span class="hl-tag">&lt;iframe</span>
-    <span class="hl-attr">src</span>=<span class="hl-val">"https://www.youtube.com/embed/<span class="hl-url">lBvUcZPFJg8</span>"</span>
-    <span class="hl-attr">style</span>=<span class="hl-val">"position:absolute;top:0;left:0;width:100%;height:100%;border:0;"</span>
-    <span class="hl-attr">allowfullscreen</span>
-    <span class="hl-attr">loading</span>=<span class="hl-val">"lazy"</span>
-    <span class="hl-attr">title</span>=<span class="hl-val">"La Nomenclature Dintilhac"</span>
-    <span class="hl-attr">allow</span>=<span class="hl-val">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span>
-  <span class="hl-tag">&gt;&lt;/iframe&gt;</span>
-<span class="hl-tag">&lt;/div&gt;</span></pre>
-  </div>
+
 
 </div>
 
@@ -551,17 +487,7 @@ footer {
   </div>
 </footer>
 
-<script>
-function copyCode(btn, id) {
-  const pre = document.getElementById(id);
-  const text = pre.innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = '✓ Copié !';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copier'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-</script>
+
 
 </body>
 </html>
